@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Layout } from "antd";
+import HeaderNav from "./HeaderNav/index";
+import SiderBar from "./SiderBar/index";
+import HeaderTop from "./HeaderTop/index";
 
-function App() {
+
+const App = () => {
+  const { Header, Footer, Sider, Content } = Layout;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <HeaderTop />
+      <Header>
+        <HeaderNav />
+      </Header>
+      <Layout>
+        <Sider>
+          <SiderBar />
+        </Sider>
+        <Content>Container</Content>
+      </Layout>
+      <Footer>Footer</Footer>
+    </Layout>
   );
-}
+};
 
 export default App;
