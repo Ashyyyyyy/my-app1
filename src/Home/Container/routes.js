@@ -4,15 +4,15 @@ import Activity3 from "./Activity3/index";
 
 let routes = [
   {
-    path: '/activity1',
+    path: '/home/activity1',
     component: Activity1,
   },
   {
-    path: '/activity2',
+    path: '/home/activity2',
     component: Activity2,
   },
   {
-    path: '/activity3',
+    path: '/home/activity3',
     component: Activity3,
   },
 ];

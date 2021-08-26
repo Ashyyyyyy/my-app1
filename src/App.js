@@ -1,23 +1,15 @@
 import React from "react";
-import { Layout } from "antd";
-import HeaderNav from "./HeaderNav/index";
-import SiderBar from "./SiderBar/index";
-import HeaderTop from "./HeaderTop/index";
-import Container from "./Container/index";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import Home from "./Home/index";
+import Welcome from "./Welcome/index";
 
 const App = () => {
-  const { Header, Footer, Sider, Content } = Layout;
-
   return (
-    <Layout>
-      <HeaderTop />
-      <HeaderNav />
-      <Layout>
-        <SiderBar />
-        <Container />
-      </Layout>
-      <Footer>Footer</Footer>
-    </Layout>
+    <Router>
+      <Route exact path="/" component={Welcome} />
+      <Route path="/home" component={Home} />
+    </Router>
   );
 };
 
