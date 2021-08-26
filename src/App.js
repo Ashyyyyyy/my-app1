@@ -5,21 +5,16 @@ import SiderBar from "./SiderBar/index";
 import HeaderTop from "./HeaderTop/index";
 import Container from "./Container/index";
 
-
 const App = () => {
   const { Header, Footer, Sider, Content } = Layout;
 
   return (
     <Layout>
       <HeaderTop />
-      <Header>
-        <HeaderNav />
-      </Header>
+      <HeaderNav />
       <Layout>
-        <Sider>
-          <SiderBar />
-        </Sider>
-        <Content><Container/></Content>
+        <SiderBar />
+        <Container />
       </Layout>
       <Footer>Footer</Footer>
     </Layout>
