@@ -1,13 +1,16 @@
 import WelcomeHeader from "./WelcomeHeader/index";
-import WelcomeNav from "./WelcomeNav";
+import WelcomeNav from "./WelcomeNav/index";
+import WelcomePresent from "./WelcomePresent/index";
+
+import { WelcomeStyle } from "./style";
 
 const Welcome = () => {
   return (
-    <div>
+    <WelcomeStyle>
       <WelcomeHeader />
       <WelcomeNav />
-      <div className="welcomePresent">welcomePresent</div>
-    </div>
+      <WelcomePresent />
+    </WelcomeStyle>
   );
 };
 
