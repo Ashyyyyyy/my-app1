@@ -9,9 +9,7 @@ const HeaderTop = () => {
   const { Header } = Layout;
   return (
     // <Header>
-      <div>
         <HeaderTopImgStyle src={HeaderTopImg} />
-      </div>
     // </Header>
   );
 };
